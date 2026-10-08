@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  background-color: var(--bg-color, #f8fafc);
+  color: var(--text-color, #1e293b);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+  --bg-color: #020617;
+  --text-color: #f8fafc;
+}
